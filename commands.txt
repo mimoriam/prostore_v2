@@ -30,3 +30,4 @@ npx auth secret
 npm i @auth/prisma-adapter
 
 npx shadcn@latest add input label
+npx shadcn@latest add toast
