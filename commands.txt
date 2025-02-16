@@ -1,0 +1,32 @@
+node -v > .node-version
+(echo .idea .next node_modules .env .env.* package-lock.json) > .eslintignore
+(echo .) > .prettierrc.json
+(echo .idea .next node_modules .env .env.* package-lock.json) > .prettierignore
+
+npm i -D prettier eslint-plugin-tailwindcss eslint-config-prettier eslint-plugin-prettier prettier-plugin-tailwindcss @trivago/prettier-plugin-sort-imports
+
+npx shadcn@latest init
+npx shadcn@latest add button
+
+npx shadcn@latest add dropdown-menu
+npm i next-themes
+
+npx shadcn@latest add sheet
+npx shadcn@latest add card
+
+npm i -D prisma @prisma/client
+npx prisma init
+npx prisma generate
+npx prisma migrate dev --name init
+dotenv -e .env -- npx tsx ./db/seed
+
+npm i zod
+
+npx shadcn@latest add badge
+npm i bcrypt-ts-edge
+
+npm i next-auth@beta
+npx auth secret
+npm i @auth/prisma-adapter
+
+npx shadcn@latest add input label
